@@ -137,3 +137,9 @@ Should to add some params in .properties file:
  spring.integration.poller.fixed-delay=100
 ```
 
+* Test
+
+  Data Stream From Supplier
+  
+  <center><img width="745" alt="Screen Shot 2023-09-30 at 20 17 50" src="https://github.com/Elma-dev/Kafka_Spring_Boot_/assets/67378945/e389f25a-4ccc-421d-9905-54625c95906e"></center>
+
