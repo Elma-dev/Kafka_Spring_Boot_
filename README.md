@@ -85,3 +85,16 @@ In this repository i will create an application can consume messages from a brok
      <img width="1440" alt="Screen Shot 2023-09-30 at 18 14 04" src="https://github.com/Elma-dev/Kafka_Spring_Boot_/assets/67378945/a9482387-006c-4904-aa80-686b1ba8e05a">
 
 ## Create Consumer using Consumer function
+```java
+ @Service
+ public class KafkaConsumer {
+     @Bean
+     public Consumer<PageEvent> consumerPageEvent(){
+         return (input)->{
+             System.out.println("---------------------------");
+             System.out.println(input.toString());
+             System.out.println("-----------------------------");
+         };
+     } 
+ }
+```
