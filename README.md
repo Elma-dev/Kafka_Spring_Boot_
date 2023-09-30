@@ -24,7 +24,7 @@ In this repository i will create an application can consume messages from a brok
 
   * Consumer function
 
-* Crete Consumer/Producer (KafkaStream) with Spring (spring cloud stream):
+* Crete Consumer/Producer (KafkaStream) with Spring (Stream Processing):
 
   * Function function
 
