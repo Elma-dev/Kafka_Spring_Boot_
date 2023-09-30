@@ -143,3 +143,37 @@ Should to add some params in .properties file:
   
   <center><img width="745" alt="Screen Shot 2023-09-30 at 20 17 50" src="https://github.com/Elma-dev/Kafka_Spring_Boot_/assets/67378945/e389f25a-4ccc-421d-9905-54625c95906e"></center>
 
+## Create Function Consumer Producer in Same Time
+
+```
+ In this section we need to use Function function to create a method can to get message from topic test
+and send it to another one test2
+```
+
+```java
+ @Service
+ public class FunctionConsProd {
+     @Bean
+     public Function<PageEvent,PageEvent> pageEventFunction(){
+         return (input)->{
+           input.setName(input.getName()+" page");
+           input.setUser(input.getUser()+" user");
+           return input;
+         };
+     }
+ }
+```
+* application.properties
+```yaml
+ spring.cloud.stream.bindings.pageEventFunction-in-0.destination=test
+ spring.cloud.stream.bindings.pageEventFunction-out-0.destination=test2
+ spring.cloud.function.definition:pageEventFunction
+
+```
+
+* Test
+
+  <img width="1440" alt="image" src="https://github.com/Elma-dev/Kafka_Spring_Boot_/assets/67378945/1e3d4f27-90eb-4896-925b-e044def7a5f2">
+
+
+
