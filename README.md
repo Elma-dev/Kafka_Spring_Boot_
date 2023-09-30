@@ -11,7 +11,7 @@ In this repository i will create an application can consume messages from a brok
  
 * Crete Producer with Spring using:
 
-  * Event Producer  -> as a Rest api
+  * Event Producer with StreamBridge  -> as a Rest api
  
   * Suplier function
  
@@ -61,3 +61,18 @@ In this repository i will create an application can consume messages from a brok
    
     <img width="1195" alt="image" src="https://github.com/Elma-dev/Kafka_Spring_Boot_/assets/67378945/de35a569-e3d3-42ed-8d38-5ebee6b3f80c">
 
+## Create Producer using StreamBridge
+   ```java
+    @RestController
+    @AllArgsConstructor
+    public class KafkaEventProducer {
+        public StreamBridge streamBridge;
+        @GetMapping("/puplish/{topic}/{name}")
+        public PageEvent publich(@PathVariable String topic,@PathVariable  String name){
+            PageEvent pageEvent=new PageEvent(name,Math.random()>0.5?"U1":"U2",new Date(),new Random().nextInt(1000));
+            streamBridge.send(topic,pageEvent);
+            return pageEvent;
+        }
+    }
+   ```
+   * Test
