@@ -98,3 +98,42 @@ In this repository i will create an application can consume messages from a brok
      } 
  }
 ```
+* Should to set this parameters in `application.properites` file:
+```yml
+   spring.cloud.stream.bindings.consumerPageEvent-in-0.destination=test
+   spring.cloud.function.definition:consumerPageEvent
+```
+
+* Test
+  
+   <img width="1440" alt="Screen Shot 2023-09-29 at 20 33 13" src="https://github.com/Elma-dev/Kafka_Spring_Boot_/assets/67378945/fa857b06-76fa-4c0b-867c-250b97ede805">
+## Create Supplier Producer 
+```
+Producer Supplier send a message to a topic in brocker cyclic delay in time  .
+```
+
+```java
+ @Service
+ public class SupplierProducer {
+     @Bean
+     public Supplier<PageEvent> pageEventSupplier(){
+         return ()->{
+             return new PageEvent(
+                     Math.random()>0.5?"P1":"P2",
+                     Math.random()>0.5?"U1":"U1",
+                     new Date(),
+                     new Random(1000).nextInt()
+             );
+         };
+     }
+ }
+```
+
+Should to add some params in .properties file:
+
+```yml
+ spring.cloud.stream.bindings.pageEventSupplier-out-0.destination=test
+ spring.cloud.function.definition:pageEventSupplier
+ spring.integration.poller.fixed-delay=100
+```
+
