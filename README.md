@@ -4,6 +4,206 @@
 ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
 ![Apache Kafka](https://img.shields.io/static/v1?style=for-the-badge&message=Apache+Kafka&color=231F20&logo=Apache+Kafka&logoColor=FFFFFF&label=)
 
+# Project Tree
+
+```
+.
+├── Kafka_Spring_Boot_.iml
+├── README.md
+├── kafka_consumer
+│   ├── HELP.md
+│   ├── mvnw
+│   ├── mvnw.cmd
+│   ├── pom.xml
+│   ├── src
+│   │   ├── main
+│   │   │   ├── java
+│   │   │   │   └── dev
+│   │   │   │       └── elma
+│   │   │   │           └── kafaka_consumer
+│   │   │   │               ├── KafakaConsumerApplication.java
+│   │   │   │               ├── entities
+│   │   │   │               │   └── PageEvent.java
+│   │   │   │               └── services
+│   │   │   │                   └── KafkaConsumer.java
+│   │   │   └── resources
+│   │   │       └── application.properties
+│   │   └── test
+│   │       └── java
+│   │           └── dev
+│   │               └── elma
+│   │                   └── kafaka_consumer
+│   │                       └── KafakaConsumerApplicationTests.java
+│   └── target
+│       ├── classes
+│       │   ├── application.properties
+│       │   └── dev
+│       │       └── elma
+│       │           └── kafaka_consumer
+│       │               ├── KafakaConsumerApplication.class
+│       │               ├── entities
+│       │               │   └── PageEvent.class
+│       │               └── services
+│       │                   └── KafkaConsumer.class
+│       └── generated-sources
+│           └── annotations
+├── kafka_event_producer_rest
+│   ├── HELP.md
+│   ├── mvnw
+│   ├── mvnw.cmd
+│   ├── pom.xml
+│   ├── src
+│   │   ├── main
+│   │   │   ├── java
+│   │   │   │   └── dev
+│   │   │   │       └── elma
+│   │   │   │           └── kafka_event_producer_rest
+│   │   │   │               ├── KafkaEventProducerRestApplication.java
+│   │   │   │               ├── api
+│   │   │   │               │   └── KafkaEventProducer.java
+│   │   │   │               ├── entities
+│   │   │   │               │   └── PageEvent.java
+│   │   │   │               └── services
+│   │   │   │                   └── KafkaConsumer.java
+│   │   │   └── resources
+│   │   │       └── application.properties
+│   │   └── test
+│   │       └── java
+│   │           └── dev
+│   │               └── elma
+│   │                   └── kafka_event_producer_rest
+│   │                       └── KafkaEventProducerRestApplicationTests.java
+│   └── target
+│       ├── classes
+│       │   ├── application.properties
+│       │   └── dev
+│       │       └── elma
+│       │           └── kafka_event_producer_rest
+│       │               ├── KafkaEventProducerRestApplication.class
+│       │               ├── api
+│       │               │   └── KafkaEventProducer.class
+│       │               ├── entities
+│       │               │   └── PageEvent.class
+│       │               └── services
+│       │                   └── KafkaConsumer.class
+│       └── generated-sources
+│           └── annotations
+├── kafka_function_cons_prod
+│   ├── HELP.md
+│   ├── mvnw
+│   ├── mvnw.cmd
+│   ├── pom.xml
+│   ├── src
+│   │   ├── main
+│   │   │   ├── java
+│   │   │   │   └── dev
+│   │   │   │       └── elma
+│   │   │   │           └── kafka_function_cons_prod
+│   │   │   │               ├── KafkaFunctionConsProdApplication.java
+│   │   │   │               ├── entities
+│   │   │   │               │   └── PageEvent.java
+│   │   │   │               └── services
+│   │   │   │                   └── FunctionConsProd.java
+│   │   │   └── resources
+│   │   │       └── application.properties
+│   │   └── test
+│   │       └── java
+│   │           └── dev
+│   │               └── elma
+│   │                   └── kafka_function_cons_prod
+│   │                       └── KafkaFunctionConsProdApplicationTests.java
+│   └── target
+│       ├── classes
+│       │   ├── application.properties
+│       │   └── dev
+│       │       └── elma
+│       │           └── kafka_function_cons_prod
+│       │               ├── KafkaFunctionConsProdApplication.class
+│       │               ├── entities
+│       │               │   └── PageEvent.class
+│       │               └── services
+│       │                   └── FunctionConsProd.class
+│       └── generated-sources
+│           └── annotations
+├── kafka_stream_function
+│   ├── HELP.md
+│   ├── mvnw
+│   ├── mvnw.cmd
+│   ├── pom.xml
+│   ├── src
+│   │   ├── main
+│   │   │   ├── java
+│   │   │   │   └── dev
+│   │   │   │       └── elma
+│   │   │   │           └── kafka_stream_function
+│   │   │   │               ├── KafkaStreamFunctionApplication.java
+│   │   │   │               ├── entities
+│   │   │   │               │   └── PageEvent.java
+│   │   │   │               └── services
+│   │   │   │                   └── StreamFunction.java
+│   │   │   └── resources
+│   │   │       └── application.properties
+│   │   └── test
+│   │       └── java
+│   │           └── dev
+│   │               └── elma
+│   │                   └── kafka_stream_function
+│   │                       └── KafkaStreamFunctionApplicationTests.java
+│   └── target
+│       ├── classes
+│       │   ├── application.properties
+│       │   └── dev
+│       │       └── elma
+│       │           └── kafka_stream_function
+│       │               ├── KafkaStreamFunctionApplication.class
+│       │               ├── entities
+│       │               │   └── PageEvent.class
+│       │               └── services
+│       │                   └── StreamFunction.class
+│       └── generated-sources
+│           └── annotations
+└── kafka_supplaier_producer
+    ├── HELP.md
+    ├── mvnw
+    ├── mvnw.cmd
+    ├── pom.xml
+    ├── src
+    │   ├── main
+    │   │   ├── java
+    │   │   │   └── dev
+    │   │   │       └── elma
+    │   │   │           └── kafka_supplaier_producer
+    │   │   │               ├── KafkaSupplaierProducerApplication.java
+    │   │   │               ├── entities
+    │   │   │               │   └── PageEvent.java
+    │   │   │               └── services
+    │   │   │                   └── SupplierProducer.java
+    │   │   └── resources
+    │   │       └── application.properties
+    │   └── test
+    │       └── java
+    │           └── dev
+    │               └── elma
+    │                   └── kafka_supplaier_producer
+    │                       └── KafkaSupplaierProducerApplicationTests.java
+    └── target
+        ├── classes
+        │   ├── application.properties
+        │   └── dev
+        │       └── elma
+        │           └── kafka_supplaier_producer
+        │               ├── KafkaSupplaierProducerApplication.class
+        │               ├── entities
+        │               │   └── PageEvent.class
+        │               └── services
+        │                   └── SupplierProducer.class
+        └── generated-sources
+            └── annotations
+
+123 directories, 69 files
+
+```
+
 ## About This Repo
 
 In this repository i will create an application can consume messages from a broker ´KAFKA´  using spring boot and i try to applicate all type of communication between kafka, consumer and producer:
