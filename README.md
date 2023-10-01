@@ -175,5 +175,34 @@ and send it to another one test2
 
   <img width="1440" alt="image" src="https://github.com/Elma-dev/Kafka_Spring_Boot_/assets/67378945/1e3d4f27-90eb-4896-925b-e044def7a5f2">
 
+## Stream Processing 
+```
+ In this part, I will create a function to receive data from some topic, do some analysis operations,
+and send the result to another topic. 
+```
+
+```java
+@Service
+public class StreamFunction {
+    @Bean
+    public Function<KStream<String, PageEvent>,KStream<String,Long>> kStreamFunction(){
+        return (input)->{
+
+            KStream<String, Long> map = input
+                    .filter((k, v) -> v.getDuration() > 100)
+                    .map((k, v) -> new KeyValue<String, Long>(v.getName(), 0L))
+                    .groupBy((k, y) -> k, Grouped.with(Serdes.String(), Serdes.Long()))
+                    .windowedBy(TimeWindows.of(Duration.ofMillis(500)))
+                    .count()
+                    .toStream()
+                    .map((k, v) -> new KeyValue<>("=> "+k.window()+k.window().startTime()+k.window().endTime(), v));
+            return map;
+
+        };
+    }
+}
+```
+
+
 
 
