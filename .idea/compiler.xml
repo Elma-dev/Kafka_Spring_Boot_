@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="kafka_supplaier_producer" />
+        <module name="kafka_stream_function" />
         <module name="kafka_function_cons_prod" />
         <module name="kafka_event_producer_rest" />
         <module name="kafaka_consumer" />
@@ -18,6 +19,7 @@
       <module name="kafaka_consumer" options="-parameters" />
       <module name="kafka_event_producer_rest" options="-parameters" />
       <module name="kafka_function_cons_prod" options="-parameters" />
+      <module name="kafka_stream_function" options="-parameters" />
       <module name="kafka_supplaier_producer" options="-parameters" />
     </option>
   </component>

@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/kafka_supplaier_producer/pom.xml" />
         <option value="$PROJECT_DIR$/kafka_function_cons_prod/pom.xml" />
         <option value="$PROJECT_DIR$/kafka_consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/kafka_stream_function/pom.xml" />
       </list>
     </option>
   </component>

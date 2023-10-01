@@ -5,6 +5,7 @@
     <file url="file://$PROJECT_DIR$/kafka_consumer/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/kafka_event_producer_rest/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/kafka_function_cons_prod/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka_stream_function/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/kafka_supplaier_producer/src/main/java" charset="UTF-8" />
   </component>
 </project>

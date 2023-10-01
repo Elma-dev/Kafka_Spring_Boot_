@@ -16,7 +16,7 @@ public class SupplierProducer {
                     Math.random()>0.5?"P1":"P2",
                     Math.random()>0.5?"U1":"U1",
                     new Date(),
-                    new Random(1000).nextInt()
+                    new Random().nextInt(1000)
             );
         };
     }
